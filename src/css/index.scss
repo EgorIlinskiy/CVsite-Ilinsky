@@ -1,91 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap');
- *{
-   font-family: 'Poppins', sans-serif;
- }
-
-img{
-  z-index: 5;
-  min-width: 100px;
-}
-.mainBlob{
-  fill: #7266d3;
-  max-width: 400px;
-  overflow: hidden;
-}
-.blobImage{
- overflow: hidden;
-
+* {
+    font-family: 'Poppins', sans-serif;
 }
 
-.loadScreen{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background: #000;
+img {
+    z-index: 5;
+    min-width: 100px;
 }
 
-
-.loadScreen .ring{
-  position: relative;
-  width: 150px;
-  height: 150px;
-  margin: -30px;
-  border-radius: 50% ;
-  border-top: 1px solid purple;
-  border-bottom: transparent;
-  animation: load 2s linear infinite;
+.mainBlob {
+    fill: #7266d3;
+    max-width: 400px;
+    overflow: hidden;
 }
-.ring::before{
-  content: '';
+
+.blobImage {
+    overflow: hidden;
+}
+
+.loadScreen {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #000;
+}
+
+.loadScreen .ring {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: -30px;
+    border-radius: 50%;
+    border-top: 1px solid purple;
+    border-bottom: transparent;
+    animation: load 2s linear infinite;
+}
+
+.ring::before {
+    content: '';
 }
 
 @keyframes load {
-  0%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
-.ring:nth-child(1){
-  animation-delay: -1s;
+
+.ring:nth-child(1) {
+    animation-delay: -1s;
 }
-.loadScreen .load-text{
-  color:purple;
-  position: absolute;
-  top:64%;
-  animation: textLoad 1s linear infinite;
+
+.loadScreen .load-text {
+    color: purple;
+    position: absolute;
+    top: 64%;
+    animation: textLoad 1s linear infinite;
 }
+
 @keyframes textLoad {
-  0%{
-    opacity: 100%;
-  }
-  50%{
-    opacity: 60%;
-  }
-  100%{
-    opacity: 100%;
-  }
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 60%;
+    }
+    100% {
+        opacity: 100%;
+    }
 }
 
-.example-enter {
-transform: scaleY(0);
-
+.slide-enter {
+    transform: translateY(-100%);
+    transition: .4s cubic-bezier(0, 1, 0.5, 1);
+    &.slide-enter-active {
+        transform: translateY(0%);
+    }
 }
 
-.example-enter-active, .example-exit {
-transform: scaleY(1);
+.slide-leave {
+    transform: translateY(0%);
+    transition: .4s ease-in-out;
+    &.slide-leave-active {
+        transform: translateY(-100%);
+    }
 }
 
-.example-exit-active {
-  transform: scaleY(0);
-}
-
-.skilltext{
-  position: absolute;
+.angleToggle {
+    font-size: 2rem;
 }

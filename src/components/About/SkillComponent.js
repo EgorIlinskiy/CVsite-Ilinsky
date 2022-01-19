@@ -1,13 +1,17 @@
 import React from "react";
-
+import {ProgressbarCont, ProgressbarInner, SkillText, SkillTextContainer} from './AboutComponents'
 class SkillComponent extends React.Component{
 render() {
-    return <div>
-        <div style={{border:'1px solid black', height:'2px'}}>
-            <div className={'Skilltext'}>HTML</div>
-            <div style={{background: this.props.theme, width: this.props.percents, height:'2px' }}></div>
-        </div>
+
+    return <div style={{marginTop:'10px'}}>
+             <SkillText>
+                {this.props.children}
+            </SkillText>
+    <ProgressbarCont>
+        <ProgressbarInner theme = {this.props.theme} percents = {this.props.percents}/>
+    </ProgressbarCont>
     </div>
+    
 }
 }
 

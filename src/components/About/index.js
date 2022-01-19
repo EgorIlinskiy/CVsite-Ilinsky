@@ -1,13 +1,14 @@
 import React, {Fragment} from "react";
 import SkillViewer from "./SkillViewer";
-class About extends React.Component{
+import { AboutMainText } from './AboutComponents'
+class AboutPage extends React.Component{
 
     render() {
         return <Fragment>
-            <h1>its about page</h1>
+                <AboutMainText>This is a list of my basic skills, there are also many other minor ones that I have not mentioned.</AboutMainText>
                     <SkillViewer/>
         </Fragment>
     }
 }
 
-export default About
+export default AboutPage

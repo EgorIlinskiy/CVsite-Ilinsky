@@ -22,7 +22,7 @@ class NavBar extends React.Component{
                     <NavLinks to="/about" theme={this.props.theme}>
                         About
                     </NavLinks>
-                    <NavLinks to="/pref" theme={this.props.theme}>
+                    <NavLinks to="/portfolio" theme={this.props.theme}>
                         Portfolio
                     </NavLinks>
                 </NavMenu>
