@@ -32,7 +32,7 @@ class App extends React.Component{
              return <PreLoader/>
          } else
         return <Provider store = {store}>
-                <HashRouter>
+                <HashRouter base='/'>
                     <NavBar/>
                     <PageRouter />
                 </HashRouter>
