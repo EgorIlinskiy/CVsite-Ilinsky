@@ -2,29 +2,31 @@ import React from "react";
 import {connect} from 'react-redux'
 import {Nav, NavLinks, NavLogo, NavMenu,NavContainer} from './navComponents'
 import {ColoredText} from '../Main/mainComponents'
+import Settings from '../Settings/index'
+
 class NavBar extends React.Component{
 
 
 
     render() {
-
-        return <Nav>
-            <NavContainer>
-                <NavLogo>
-                    {'<EGOR'}
-                    <ColoredText theme={this.props.theme}>/</ColoredText>
+        return <Nav theme={this.props.colors}>
+            <NavContainer >
+                <NavLogo theme={this.props.colors} >
+                  {'<EGOR'}
+                    <ColoredText theme={this.props.colors}>/</ColoredText>
                     {'>'}
                 </NavLogo>
                 <NavMenu>
-                    <NavLinks to="/" theme={this.props.theme}>
+                    <NavLinks to="/" theme={this.props.colors}>
                         Main
                     </NavLinks>
-                    <NavLinks to="/about" theme={this.props.theme}>
+                    <NavLinks to="/about" theme={this.props.colors}>
                         About
                     </NavLinks>
-                    <NavLinks to="/portfolio" theme={this.props.theme}>
+                    <NavLinks to="/portfolio" theme={this.props.colors}>
                         Portfolio
                     </NavLinks>
+                    <Settings/>
                 </NavMenu>
             </NavContainer>
           </Nav>
@@ -34,7 +36,7 @@ class NavBar extends React.Component{
 
 let mapStateToProps = function(state){
     return{
-        theme: state.store.theme
+        colors: state.store
     }
 }
 

@@ -4,6 +4,7 @@ import {createStore} from 'redux'
 import combineReducers from '../store/index'
 import { BrowserRouter} from "react-router-dom";
 import NavBar from "../components/Navbar";
+import PreLoader from './PreLoader/index';
 import 'normalize.css'
 import '../css/index.scss'
 import PageRouter from "../components/PageRouter";
@@ -23,23 +24,17 @@ class App extends React.Component{
             this.setState({
                 isLoaded:true
             })
-        },1000)
+        },2000)
     }
 
     render() {
-        // if(!this.state.isLoaded){
-        //     return <div className="loadScreen">
-        //                 <div className="ring"></div>
-        //                 <div className="ring"></div>
-        //                 <span className="load-text">
-        //                         Loading...
-        //                 </span>
-        //          </div>
-        // } else
+        if(!this.state.isLoaded){
+             return <PreLoader/>
+         } else
         return <Provider store = {store}>
                 <BrowserRouter>
                     <NavBar/>
-                    <PageRouter/>
+                    <PageRouter />
                 </BrowserRouter>
             </Provider>
 

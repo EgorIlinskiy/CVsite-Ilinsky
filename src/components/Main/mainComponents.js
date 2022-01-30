@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
 
-export const Container = styled.div`
+export const Container = styled.div `
   width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto;  
   @media (max-width: 1000px) {
   }
 `
 
-export  const MainPageContainer = styled.div`
+export const MainPageContainer = styled.div `
   margin:8% 50px 0 50px;
   position: relative;
   display: flex;
@@ -16,21 +16,21 @@ export  const MainPageContainer = styled.div`
   align-items: center;
   justify-content: space-between;
 `
-export const MainPageAbout = styled.div`
+export const MainPageAbout = styled.div `
   width: 545px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 `
 
-export  const  MainPageH1 = styled.h1`
+export const MainPageH1 = styled.h1 `
   margin: 0;
   padding: 0;
   font-size: 3.5rem;
-
+  color: ${props => (props.theme.dark) ? 'white':'black'};
 `
-export const MainPageButton = styled.a` 
-  background-color: #7266d3;
+export const MainPageButton = styled.a ` 
+  background-color: ${props => props.theme.theme};
   display: inline-block;
   color: #fff;
   padding: .75rem 2.5rem;
@@ -39,42 +39,46 @@ export const MainPageButton = styled.a`
   width: 100px;
   cursor: pointer;
   text-align: center;
+  text-decoration:none;
         &:hover{
-          background: #786ce4;
-          box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+          background: ${props => props.theme.theme};
+          box-shadow: ${props => (props.theme.dark) ? '0px 10px 36px rgba(255,255,255,0.15)':'0px 10px 36px rgba(0, 0, 0, 0.15)'}
         }
 `
 
-export const MainPageText = styled.p`
+export const MainPageText = styled.p `
     font-size: 1.2rem;
+    color: ${props => (props.theme.dark) ? 'white':'black'};
+
 `
-export const MainPageDesc = styled.span`
+export const MainPageDesc = styled.span `
     font-size: 1.2rem;
     margin-top: 5px;
+
 `
-export const ColoredText = styled.span`
-  color: ${props => props.theme};
+export const ColoredText = styled.span `
+  color: ${props => props.theme.theme};
 `
-export  const  MainPagePhoto = styled.div`
+export const MainPagePhoto = styled.div `
     box-sizing: border-box;
     min-width: 400px;
 `
 
-export  const MainPageLinks =styled.div`
+export const MainPageLinks = styled.div `
     display: flex;
     flex-direction: column;
     align-items: center;
 `
 
-export  const MainPageLink = styled.a`
+export const MainPageLink = styled.a `
   cursor: pointer;
   margin: 15px 0;
   font-size: 1.4rem;
   transition: 0.3s;
-  color:black;
+  color: ${props => (props.theme.dark) ? 'white':'black'};
   &:hover{
-    opacity: 0.9;
-    color: ${props => props.theme};
+    opacity: 0.4s;
+    color: ${props => props.theme.theme};
 
   }
 `

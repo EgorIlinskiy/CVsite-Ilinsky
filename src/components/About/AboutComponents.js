@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const AboutHeader = styled.h1 `
-  color: ${props => props.theme};
+  color: ${props => (props.theme.dark) ? 'white' : 'black'};
   margin: 0;
   padding: 0;
   font-size: 3.5rem;
@@ -36,10 +36,11 @@ export const SkillHeader = styled.div `
   justify-content: space-between;
   align-items: center;
   font-weight:bold;
+  color: ${props => (props.theme.dark) ? 'white' : 'black'};
 `
 
 export const SkillTitle = styled.span `
-    color:black;
+    color: ${props => (props.theme.dark) ? 'white' : 'black'};
     font-size: 2.1rem;
 `
 
@@ -53,10 +54,11 @@ display:inline;
 position:relative;
 top:12px;
 left:15px;
-background-color: #fff;
+background-color:  ${props => (props.theme.dark) ? '#1f1c2c' : 'white'};
 text-align:center;
 padding:5px;
 border-radius: 30%;
+color: ${props => (props.theme.dark) ? 'white' : 'black'};
 `
 
 export const ProgressbarCont = styled.div `
@@ -66,7 +68,7 @@ height:4px;
 z-index: 0;
 `
 export const ProgressbarInner = styled.div `
-background: ${props => props.theme};
+background: ${props => props.theme.theme};
 width: ${props => props.percents}  ;
 height:4px;
 border-radius:15px;
@@ -74,6 +76,6 @@ border-radius:15px;
 
 export const AboutMainText = styled.h1 `
 text-align:center;
-color: ${props => props.theme};
+color: ${props => (props.theme.dark) ? 'white': 'black'};
 
 `

@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap');
 * {
     font-family: 'Poppins', sans-serif;
+    transition: 0.1s;
+}
+
+*::selection {
+    color: none;
+    background: none;
 }
 
 img {
@@ -9,72 +15,12 @@ img {
 }
 
 .mainBlob {
-    fill: #7266d3;
     max-width: 400px;
     overflow: hidden;
 }
 
 .blobImage {
     overflow: hidden;
-}
-
-.loadScreen {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background: #000;
-}
-
-.loadScreen .ring {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin: -30px;
-    border-radius: 50%;
-    border-top: 1px solid purple;
-    border-bottom: transparent;
-    animation: load 2s linear infinite;
-}
-
-.ring::before {
-    content: '';
-}
-
-@keyframes load {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.ring:nth-child(1) {
-    animation-delay: -1s;
-}
-
-.loadScreen .load-text {
-    color: purple;
-    position: absolute;
-    top: 64%;
-    animation: textLoad 1s linear infinite;
-}
-
-@keyframes textLoad {
-    0% {
-        opacity: 100%;
-    }
-    50% {
-        opacity: 60%;
-    }
-    100% {
-        opacity: 100%;
-    }
 }
 
 .slide-enter {
@@ -95,4 +41,27 @@ img {
 
 .angleToggle {
     font-size: 2rem;
+}
+
+.uil-moon {
+    color: #7266d3;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.uil-sun {
+    color: #ffbf00;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.uil-times-circle {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.uil-setting,
+.uil-moon,
+.uil-sun {
+    font-size: 1.2rem;
 }
