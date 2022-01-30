@@ -8,7 +8,7 @@ import PreLoader from './PreLoader/index';
 import 'normalize.css'
 import '../css/index.scss'
 import PageRouter from "../components/PageRouter";
-
+import {HashRouter} from 'react-router-dom';
 let store =createStore(combineReducers)
 
 class App extends React.Component{
@@ -32,10 +32,10 @@ class App extends React.Component{
              return <PreLoader/>
          } else
         return <Provider store = {store}>
-                <BrowserRouter>
+                <HashRouter>
                     <NavBar/>
                     <PageRouter />
-                </BrowserRouter>
+                </HashRouter>
             </Provider>
 
         }
