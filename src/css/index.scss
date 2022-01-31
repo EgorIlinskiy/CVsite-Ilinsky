@@ -17,6 +17,9 @@ img {
 .mainBlob {
     max-width: 400px;
     overflow: hidden;
+    @media(max-width: 670px) {
+        max-width: 200px;
+    }
 }
 
 .blobImage {
@@ -64,4 +67,8 @@ img {
 .uil-moon,
 .uil-sun {
     font-size: 1.2rem;
+}
+
+.uil-subject {
+    font-size: 2rem;
 }

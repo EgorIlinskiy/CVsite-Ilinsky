@@ -31,6 +31,9 @@ background-color: black;
 width:450px;
 background-color: rgba(39,47,51,0.85);
 height:100%;
+@media(max-width:600px) {
+    width:100%;
+}
 `
 
 export const PortfolioLink = styled.a `

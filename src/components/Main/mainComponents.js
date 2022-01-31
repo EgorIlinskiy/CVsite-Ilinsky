@@ -12,6 +12,7 @@ export const CrunchesBlock = styled.div `
   flex-direction: row;
   justify-content:space-between;
   align-items:center;
+    
 `
 
 export const MainPageContainer = styled.div `
@@ -33,6 +34,12 @@ export const MainPageAbout = styled.div `
   display: flex;
   flex-direction: column;
   justify-content: center;
+        @media(max-width: 670px) {
+          width:100%;
+          margin: 0 auto;
+          text-align:center;
+          align-items:center;
+        }
 `
 
 export const MainPageH1 = styled.h1 `
@@ -40,6 +47,12 @@ export const MainPageH1 = styled.h1 `
   padding: 0;
   font-size: 3.5rem;
   color: ${props => (props.theme.dark) ? 'white':'black'};
+  @media(max-width:670px) {
+    font-size:2rem;
+  }
+  @media(max-width:500px) {
+        margin-top:15px;
+      }
 `
 export const MainPageButton = styled.a ` 
   background-color: ${props => props.theme.theme};
@@ -56,6 +69,9 @@ export const MainPageButton = styled.a `
           background: ${props => props.theme.theme};
           box-shadow: ${props => (props.theme.dark) ? '0px 10px 36px rgba(255,255,255,0.15)':'0px 10px 36px rgba(0, 0, 0, 0.15)'}
         }
+        @media(max-width:450px) {
+          margin-bottom:20px;
+      }
 `
 
 export const MainPageText = styled.p `
@@ -74,6 +90,13 @@ export const ColoredText = styled.span `
 export const MainPagePhoto = styled.div `
     box-sizing: border-box;
     min-width: 400px;
+    @media(max-width: 670px) {
+     max-width: 200px;
+     display:flex;
+     flex-direction:row;
+     justify-content:center;
+     align-items:center;
+    }
 `
 
 export const MainPageLinks = styled.div `

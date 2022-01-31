@@ -8,6 +8,7 @@ import 'normalize.css'
 import '../css/index.scss'
 import PageRouter from "../components/PageRouter";
 import {HashRouter} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 let store =createStore(combineReducers)
 
 class App extends React.Component{
