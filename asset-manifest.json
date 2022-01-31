@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/CVsite-Ilinsky/static/css/main.e3b6b80d.css",
-    "main.js": "/CVsite-Ilinsky/static/js/main.8676dad4.js",
+    "main.css": "/CVsite-Ilinsky/static/css/main.a2d5f5d8.css",
+    "main.js": "/CVsite-Ilinsky/static/js/main.0fddd565.js",
     "static/media/unique.png": "/CVsite-Ilinsky/static/media/unique.305d466f57c404b8d081.png",
     "static/media/cvsite.png": "/CVsite-Ilinsky/static/media/cvsite.399ca24f08c5aaf1b948.png",
     "static/media/photo.png": "/CVsite-Ilinsky/static/media/photo.82426c85eb73d5a19ccb.png",
     "index.html": "/CVsite-Ilinsky/index.html",
-    "main.e3b6b80d.css.map": "/CVsite-Ilinsky/static/css/main.e3b6b80d.css.map",
-    "main.8676dad4.js.map": "/CVsite-Ilinsky/static/js/main.8676dad4.js.map"
+    "main.a2d5f5d8.css.map": "/CVsite-Ilinsky/static/css/main.a2d5f5d8.css.map",
+    "main.0fddd565.js.map": "/CVsite-Ilinsky/static/js/main.0fddd565.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3b6b80d.css",
-    "static/js/main.8676dad4.js"
+    "static/css/main.a2d5f5d8.css",
+    "static/js/main.0fddd565.js"
   ]
 }
