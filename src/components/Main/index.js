@@ -1,6 +1,6 @@
 import React from "react";
 import {Container, MainPageContainer, MainPageAbout, MainPageH1, MainPageButton,
-MainPageText, MainPageDesc, MainPagePhoto,ColoredText, MainPageLinks,MainPageLink} from './mainComponents'
+MainPageText, MainPageDesc, MainPagePhoto,ColoredText, MainPageLinks,MainPageLink, CrunchesBlock} from './mainComponents'
 import {connect} from 'react-redux'
 import photo from './photo.png'
 
@@ -10,7 +10,8 @@ class MainPage extends  React.Component{
     render() {
    return  <Container>
        <MainPageContainer>
-          <MainPageLinks>
+           <CrunchesBlock>
+           <MainPageLinks>
               <MainPageLink theme={this.props.colors} target="_blank" href="https://www.linkedin.com/in/егор-ильинский-1770b2159/"><i className="uil uil-linkedin-alt"></i></MainPageLink>
               <MainPageLink theme={this.props.colors} target="_blank" href="https://github.com/Snowikifrost" > <i className="uil uil-github-alt"></i></MainPageLink>
               <MainPageLink theme={this.props.colors} target="_blank" href="https://vk.com/imaquetzal" ><i className="uil uil-vk-alt"></i></MainPageLink>
@@ -32,6 +33,7 @@ class MainPage extends  React.Component{
                     See CV <i className="uil uil-share"></i>
                 </MainPageButton>
            </MainPageAbout>
+           </CrunchesBlock>
            <MainPagePhoto>
                <svg className="mainBlob" style={{fill: this.props.colors.theme}} viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg">
                    <mask id="mask0" mask-type="alpha">

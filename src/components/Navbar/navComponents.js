@@ -6,11 +6,12 @@ export const Nav = styled.nav `
   box-shadow: ${props => (props.theme.dark) ? 'none' : '0 1px 4px rgba(146, 161, 176, 0.15)'}
 `
 export const NavContainer = styled.div `
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding:0 20px;
 `
 
 export const NavLogo = styled.span `
@@ -19,7 +20,8 @@ export const NavLogo = styled.span `
   font-size: 1.2rem;
   color: ${props => (props.theme.dark) ? 'white':'black'};
 `
-export const NavLinks = styled(NavLink)`
+export const NavLinks = styled(NavLink)
+`
   color: ${props => (props.theme.dark) ? 'white':'black'};
   margin:20px 10px;
   text-decoration: none;

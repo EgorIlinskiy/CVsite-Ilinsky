@@ -2,10 +2,16 @@ import styled from 'styled-components'
 
 
 export const Container = styled.div `
-  width: 1200px;
+ max-width: 1200px;
   margin: 0 auto;  
   @media (max-width: 1000px) {
   }
+`
+export const CrunchesBlock = styled.div `
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items:center;
 `
 
 export const MainPageContainer = styled.div `
@@ -15,6 +21,12 @@ export const MainPageContainer = styled.div `
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+        @media(max-width:1054px) {
+          flex-direction: column-reverse;
+          align-items: center;
+          justify-content: space-between;
+          margin-top:5px;
+        }
 `
 export const MainPageAbout = styled.div `
   width: 545px;
@@ -68,6 +80,7 @@ export const MainPageLinks = styled.div `
     display: flex;
     flex-direction: column;
     align-items: center;
+   margin-right:50px;
 `
 
 export const MainPageLink = styled.a `
@@ -79,6 +92,6 @@ export const MainPageLink = styled.a `
   &:hover{
     opacity: 0.4s;
     color: ${props => props.theme.theme};
-
   }
+ 
 `

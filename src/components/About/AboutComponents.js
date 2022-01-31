@@ -28,6 +28,9 @@ export const SkillContainer = styled.div `
   -ms-user-select: none;     
   user-select: none;
   width:45%;
+    @media(max-width: 852px) {
+      width:90%;
+    }
 `
 export const SkillHeader = styled.div `
   height: 70px;

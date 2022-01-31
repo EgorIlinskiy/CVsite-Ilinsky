@@ -2,7 +2,6 @@ import React from 'react';
 import {Provider} from 'react-redux'
 import {createStore} from 'redux'
 import combineReducers from '../store/index'
-import { BrowserRouter} from "react-router-dom";
 import NavBar from "../components/Navbar";
 import PreLoader from './PreLoader/index';
 import 'normalize.css'

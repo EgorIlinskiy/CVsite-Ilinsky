@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from 'react-redux'
-import {ProgressbarCont, ProgressbarInner, SkillText, SkillTextContainer} from './AboutComponents'
+import {ProgressbarCont, ProgressbarInner, SkillText} from './AboutComponents'
 class SkillComponent extends React.Component{
 render() {
 
